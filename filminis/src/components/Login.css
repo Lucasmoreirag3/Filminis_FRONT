@@ -1,0 +1,153 @@
+/* Fundo da tela inteira com o gradiente avermelhado */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center top, #4a0505 0%, #0d0d0d 50%, #000000 100%);
+  font-family: Arial, Helvetica, sans-serif; /* Substitua pela fonte do seu Figma */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* O Card principal com a borda azulada */
+.login-card {
+  background-color: rgba(10, 10, 10, 0.6);
+  border: 1px solid #1a1a1a; /* Borda escura bem sutil, se não quiser borda nenhuma é só apagar essa linha */
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Grupos de Label + Input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.input-group input {
+  background-color: #050505;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #2b77e5; /* Fica azul quando clica para digitar */
+}
+
+.input-group input::placeholder {
+  color: #555555;
+}
+
+/* Wrapper para o ícone de olho na senha */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem; /* Libera espaço para não digitar em cima do olho */
+  box-sizing: border-box;
+}
+
+.eye-button {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Links e Botões */
+.forgot-password {
+  display: block;
+  text-align: center;
+  color: #888888;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  margin-bottom: 1.8rem;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #ffffff;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #cc0000; /* Botão vermelho */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #a30000;
+}
+
+/* Linha separadora do rodapé */
+.divider {
+  height: 1px;
+  background-color: #333333;
+  margin: 1.5rem 0;
+}
+
+/* Textos de Criar Conta */
+.signup-text {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888888;
+  margin: 0;
+}
+
+.signup-link {
+  color: #cc0000;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+.signup-link:hover {
+  color: #ff3333;
+}

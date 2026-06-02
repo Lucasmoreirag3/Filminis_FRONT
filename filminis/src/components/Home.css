@@ -1,0 +1,94 @@
+.home-container {
+  width: 100vw;
+  max-width: 100%;
+  min-height: calc(100vh - 85px);
+  background: radial-gradient(ellipse at 70% 40%, #540606 0%, #0d0d0d 65%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.home-hero {
+  max-width: 650px;
+  text-align: left;
+}
+
+.hero-main-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-main-title span {
+  color: #cc0000;
+}
+
+.hero-subtext {
+  color: #888888;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-explorar {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem 2rem; 
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-explorar:hover {
+  background-color: #a30000;
+}
+
+.btn-adicionar-home {
+  background-color: rgba(20, 20, 20, 0.5);
+  color: white;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  padding: 1rem 2rem; 
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-adicionar-home:hover {
+  border-color: #ffffff;
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+.home-footer-logo {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 4rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.home-footer-logo span {
+  color: #cc0000;
+  font-size: 0.9rem;
+  margin-right: 4px;
+}

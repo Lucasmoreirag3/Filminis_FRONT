@@ -1,0 +1,14 @@
+/* Zera as margens padrão do navegador sem esmagar os componentes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Garante o fundo totalmente preto de ponta a ponta */
+html, body, #root {
+  background-color: #000000 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+}

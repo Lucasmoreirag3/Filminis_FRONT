@@ -1,0 +1,26 @@
+.container{
+    max-width: 1440px;
+    margin: auto;
+    padding: 32px;
+}
+
+
+header{
+    background: var(--bg);
+    border-radius: 20px;
+    padding: 16px 0; 
+    margin-bottom: 48px;
+    text-align: center;
+    box-shadow: var(--shadow);
+
+
+}
+
+header h1{
+    color: var(--primary);
+    font-family: "Erica One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+

@@ -1,0 +1,220 @@
+.cadastro-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center top, #4a0505 0%, #0d0d0d 50%, #000000 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.cadastro-card {
+  background-color: rgba(10, 10, 10, 0.6);
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  min-height: 400px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animação suave ao trocar de tela */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  transition: color 0.3s;
+  align-self: flex-start;
+}
+
+.back-button:hover {
+  color: #ffffff;
+}
+
+.cadastro-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.cadastro-subtitle {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+/* Inputs corrigidos para respeitarem o limite do card */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+
+.input-group label, .date-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.date-label {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.input-group input, .input-group select {
+  width: 100%; /* Garante que o input ocupe apenas o espaço da sua coluna */
+  box-sizing: border-box; /* Faz com que as bordas e o padding fiquem contidos no tamanho total */
+  background-color: #050505;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.input-group input:focus, .input-group select:focus {
+  border-color: #cc0000;
+}
+
+.disabled-input {
+  background-color: #000000 !important;
+  color: #666666 !important;
+  cursor: not-allowed;
+}
+
+/* Layout em Colunas (Linhas) */
+.row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.half-width {
+  flex: 1;
+}
+
+/* Layout da Data de Nascimento */
+.date-row {
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.date-input {
+  flex: 1;
+}
+
+.date-select {
+  flex: 2;
+}
+
+/* Checkbox de Termos */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group input {
+  margin-top: 0.2rem;
+  accent-color: #cc0000;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0; /* Impede que o quadradinho do checkbox amasse */
+}
+
+.checkbox-group label {
+  font-size: 0.75rem;
+  color: #aaaaaa;
+  line-height: 1.4;
+}
+
+.checkbox-group label span {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Botão Vermelho e Links */
+.red-button {
+  width: 100%;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.red-button:hover {
+  background-color: #a30000;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.privacy-link {
+  text-align: center;
+  color: #cc0000;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.eye-button {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}

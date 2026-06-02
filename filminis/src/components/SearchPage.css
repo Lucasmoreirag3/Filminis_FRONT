@@ -1,0 +1,104 @@
+.searchpage-container {
+  min-height: calc(100vh - 70px);
+  background: radial-gradient(circle at center 50%, #3d0505 0%, #0d0d0d 60%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchpage-content {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin-top: -40px;
+}
+
+.searchpage-indicator {
+  color: #cc0000;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.searchpage-main-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem;
+}
+
+.searchpage-large-box {
+  display: flex;
+  align-items: center;
+  background-color: rgba(10, 10, 10, 0.8);
+  border: 1px solid #333333;
+  border-radius: 30px; /* Arredondado igual ao Figma */
+  padding: 1rem 1.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.large-box-icon {
+  color: #666666;
+  margin-right: 1rem;
+}
+
+.searchpage-large-box input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.searchpage-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.search-result-item-card {
+  text-align: left;
+}
+
+.search-result-item-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #222222;
+}
+
+.search-result-item-card h4 {
+  font-size: 0.8rem;
+  margin: 0.4rem 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchpage-footer-logo {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 4rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.searchpage-footer-logo span {
+  color: #cc0000;
+  margin-right: 4px;
+}
