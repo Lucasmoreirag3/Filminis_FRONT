@@ -1,12 +1,21 @@
 .home-container {
   width: 100vw;
   max-width: 100%;
-  min-height: calc(100vh - 85px);
-  background: radial-gradient(ellipse at 70% 40%, #540606 0%, #0d0d0d 65%, #000000 100%);
+  min-height: calc(100vh - 74px);
+  
+  background: radial-gradient(
+    circle farthest-corner at 70% 40%, 
+    #4a0505 0%, 
+    #230303 30%, 
+    #0f0b0b 65%, 
+    #000000 100%
+  ) no-repeat fixed !important;
+  
+  background-size: cover !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 10%;
+  padding: 0 8%;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -15,14 +24,17 @@
 .home-hero {
   max-width: 650px;
   text-align: left;
+  z-index: 2;
 }
 
+
 .hero-main-title {
-  font-size: 3.8rem;
-  font-weight: 900;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5.5rem; 
+  font-weight: 400;
   color: #ffffff;
-  line-height: 1.1;
-  letter-spacing: -1px;
+  line-height: 1;
+  letter-spacing: 2px;
   margin-bottom: 1.5rem;
 }
 
@@ -47,7 +59,7 @@
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   font-weight: bold;
   font-size: 0.85rem;
   cursor: pointer;
@@ -63,7 +75,7 @@
   color: white;
   border: 1px solid #333333;
   border-radius: 4px;
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   font-weight: bold;
   font-size: 0.85rem;
   display: flex;

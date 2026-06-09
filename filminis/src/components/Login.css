@@ -19,10 +19,10 @@
   letter-spacing: 1px;
 }
 
-/* O Card principal com a borda azulada */
+
 .login-card {
   background-color: rgba(10, 10, 10, 0.6);
-  border: 1px solid #1a1a1a; /* Borda escura bem sutil, se não quiser borda nenhuma é só apagar essa linha */
+  border: 1px solid #1a1a1a; 
   border-radius: 12px;
   padding: 2.5rem 2rem;
   width: 100%;
@@ -31,7 +31,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* Grupos de Label + Input */
+
 .input-group {
   display: flex;
   flex-direction: column;
@@ -59,14 +59,14 @@
 }
 
 .input-group input:focus {
-  border-color: #2b77e5; /* Fica azul quando clica para digitar */
+  border-color: #2b77e5; 
 }
 
 .input-group input::placeholder {
   color: #555555;
 }
 
-/* Wrapper para o ícone de olho na senha */
+
 .password-wrapper {
   position: relative;
   display: flex;
@@ -75,7 +75,7 @@
 
 .password-wrapper input {
   width: 100%;
-  padding-right: 2.5rem; /* Libera espaço para não digitar em cima do olho */
+  padding-right: 2.5rem; 
   box-sizing: border-box;
 }
 
@@ -93,7 +93,7 @@
   justify-content: center;
 }
 
-/* Links e Botões */
+
 .forgot-password {
   display: block;
   text-align: center;
@@ -110,7 +110,7 @@
 
 .login-button {
   width: 100%;
-  background-color: #cc0000; /* Botão vermelho */
+  background-color: #cc0000; 
   color: white;
   border: none;
   border-radius: 6px;
@@ -125,14 +125,14 @@
   background-color: #a30000;
 }
 
-/* Linha separadora do rodapé */
+
 .divider {
   height: 1px;
   background-color: #333333;
   margin: 1.5rem 0;
 }
 
-/* Textos de Criar Conta */
+
 .signup-text {
   text-align: center;
   font-size: 0.85rem;

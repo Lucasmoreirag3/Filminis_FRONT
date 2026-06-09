@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Plus } from 'lucide-react';
 import './Home.css';
 
-const Home = () => {
+const Home = ({ role }) => {
   const navigate = useNavigate();
 
   return (
@@ -22,9 +22,13 @@ const Home = () => {
           <button className="btn-explorar" onClick={() => navigate('/catalogo')}>
             EXPLORAR CATÁLOGO &rarr;
           </button>
-          <button className="btn-adicionar-home" onClick={() => navigate('/catalogo')}>
-            <Plus size={16} /> ADICIONAR FILME
-          </button>
+          
+          
+          {role === 'admin' && (
+            <button className="btn-adicionar-home" onClick={() => navigate('/adicionar-filme')}>
+              <Plus size={16} /> ADICIONAR FILME
+            </button>
+          )}
         </div>
       </div>
       

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
-import { allMovies } from './MovieData';
+import { getMovies } from './movieData'; 
 import './SearchPage.css';
 
 const SearchPage = () => {
   const [globalQuery, setGlobalQuery] = useState('');
 
+  // Puxa os filmes atuais do localStorage (incluindo os novos adicionados pelo admin)
+  const activeMovies = getMovies() || [];
+
   // Busca abrangente por título ou gênero
-  const results = allMovies.filter(movie => 
+  const results = activeMovies.filter(movie => 
     globalQuery !== '' && (
       movie.titulo.toLowerCase().includes(globalQuery.toLowerCase()) ||
       movie.genero.toLowerCase().includes(globalQuery.toLowerCase())

@@ -41,14 +41,14 @@ const Cadastro = () => {
     }
   };
 
-  // 👈 LÓGICA ATUALIZADA AQUI: Salvar no "Banco Falso"
+  
   const handleFinalSubmit = (e) => {
     e.preventDefault();
     
-    // Puxa os usuários que já existem no "banco" (ou cria uma lista vazia)
+   
     const usuariosSalvos = JSON.parse(localStorage.getItem('fake_database')) || [];
     
-    // Cria o novo usuário com os dados do formulário e define que ele é um 'user' comum
+   
     const novoUsuario = {
       email: formData.email,
       password: formData.password,
@@ -56,7 +56,7 @@ const Cadastro = () => {
       role: 'user'
     };
     
-    // Adiciona na lista e salva de volta no navegador
+   
     usuariosSalvos.push(novoUsuario);
     localStorage.setItem('fake_database', JSON.stringify(usuariosSalvos));
 

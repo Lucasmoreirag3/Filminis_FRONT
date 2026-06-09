@@ -10,7 +10,7 @@ const Login = ({ setToken, setRole }) => {
   
   const navigate = useNavigate();
 
-  // 👈 LÓGICA ATUALIZADA AQUI: Validar no "Banco Falso"
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -22,7 +22,7 @@ const Login = ({ setToken, setRole }) => {
       (user) => user.email === email && user.password === password
     );
     
-    // Regra 1: É o admin mestre?
+    
     if (email === 'admin@example.com' && password === 'admin') {
       localStorage.setItem('access_token', 'token-admin-123');
       localStorage.setItem('user_role', 'admin');
@@ -30,7 +30,7 @@ const Login = ({ setToken, setRole }) => {
       setRole('admin');
       navigate('/');
       
-    // Regra 2: É um usuário que acabou de se cadastrar?
+    
     } else if (usuarioEncontrado) {
       localStorage.setItem('access_token', 'token-user-456');
       localStorage.setItem('user_role', usuarioEncontrado.role);
@@ -38,7 +38,7 @@ const Login = ({ setToken, setRole }) => {
       setRole(usuarioEncontrado.role);
       navigate('/');
       
-    // Regra 3: Errou a senha ou não existe
+    
     } else {
       alert('E-mail ou senha incorretos. Tente novamente!');
     }

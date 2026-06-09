@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-// Importando todos os componentes criados
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import MovieList from "./components/MovieList";
@@ -10,6 +9,9 @@ import SearchPage from "./components/SearchPage";
 import Login from "./components/Login";
 import Cadastro from "./components/Cadastro";
 import Movie from "./components/Movie";
+import AddMovie from "./components/AddMovie";
+import EditMovie from "./components/EditMovie";
+import AdminApprovals from "./components/AdminApprovals"; // 👈 Rota de aprovações
 
 function App() {
   const [token, settoken] = useState(null);
@@ -26,22 +28,26 @@ function App() {
   }, []);
 
   const handleLogout = () => {
-    localStorage.clear();
+    // 👈 NUNCA MAIS USAR localStorage.clear() AQUI!
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("user_role");
     settoken(null);
     setRole(null);
   };
 
   return (
     <BrowserRouter>
-      {/* O Cabeçalho fica fixo aqui em cima para aparecer em todas as páginas */}
       <Navbar token={token} handleLogout={handleLogout} />
       
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalogo" element={<MovieList />} />
+          <Route path="/" element={<Home role={role} />} />
+          <Route path="/catalogo" element={<MovieList role={role} />} />
           <Route path="/buscar" element={<SearchPage />} />
-          <Route path="/filme" element={<Movie />} />
+          <Route path="/filme/:id" element={<Movie role={role} />} />
+          <Route path="/adicionar-filme" element={<AddMovie role={role} />} />
+          <Route path="/editar-filme/:id" element={<EditMovie role={role} />} />
+          <Route path="/aprovacoes" element={<AdminApprovals role={role} />} /> {/* 👈 Rota registrada */}
           <Route path="/Login" element={<Login setRole={setRole} setToken={settoken} />} />
           <Route path="/cadastro" element={<Cadastro />} /> 
         </Routes>
