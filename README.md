@@ -1,10 +1,10 @@
-# Filminis — Gerenciador de Filmes (Monorepo)
+# LuXfilms— Gerenciador de Filmes 
 
 Versão profissional do README com visão completa do projeto, instruções de desenvolvimento, arquitetura e endpoints.
 
 **Sobre o projeto**
 
-`Filminis` é um projeto full‑stack para gerenciar um catálogo de filmes. Contém:
+`LuXfilms` é um projeto full‑stack para gerenciar um catálogo de filmes. Contém:
 - Um frontend em React (Vite) para navegação, busca, cadastro e administração de filmes.
 - Um backend em Python que expõe uma API REST para autenticação, gerenciamento de filmes e dados auxiliares.
 
