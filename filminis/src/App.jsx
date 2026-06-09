@@ -11,7 +11,7 @@ import Cadastro from "./components/Cadastro";
 import Movie from "./components/Movie";
 import AddMovie from "./components/AddMovie";
 import EditMovie from "./components/EditMovie";
-import AdminApprovals from "./components/AdminApprovals"; // 👈 Rota de aprovações
+import AdminApprovals from "./components/AdminApprovals"; 
 
 function App() {
   const [token, settoken] = useState(null);
@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   const handleLogout = () => {
-    // 👈 NUNCA MAIS USAR localStorage.clear() AQUI!
+    
     localStorage.removeItem("access_token");
     localStorage.removeItem("user_role");
     settoken(null);
@@ -47,7 +47,7 @@ function App() {
           <Route path="/filme/:id" element={<Movie role={role} />} />
           <Route path="/adicionar-filme" element={<AddMovie role={role} />} />
           <Route path="/editar-filme/:id" element={<EditMovie role={role} />} />
-          <Route path="/aprovacoes" element={<AdminApprovals role={role} />} /> {/* 👈 Rota registrada */}
+          <Route path="/aprovacoes" element={<AdminApprovals role={role} />} /> 
           <Route path="/Login" element={<Login setRole={setRole} setToken={settoken} />} />
           <Route path="/cadastro" element={<Cadastro />} /> 
         </Routes>

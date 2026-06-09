@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { addMovieToDB, addPendingMovie } from './MovieData'; // 👈 Importamos a nova função
+import { addMovieToDB, addPendingMovie } from './MovieData'; 
 import './AddMovie.css';
 
 const AddMovie = ({ role }) => {
@@ -42,7 +42,7 @@ const AddMovie = ({ role }) => {
       linguagem: formData.idioma
     };
 
-    // 👈 A MÁGICA ACONTECE AQUI: Separação de poderes!
+    
     if (role === 'admin') {
       addMovieToDB(movieData);
       alert('Filme adicionado diretamente ao catálogo oficial!');

@@ -318,30 +318,30 @@ export const getPendingMovies = () => {
   return pending ? JSON.parse(pending) : [];
 };
 
-// Salva um filme na fila de espera
+
 export const addPendingMovie = (newMovie) => {
   const pending = getPendingMovies();
-  newMovie.id = Date.now(); // Cria um ID único temporário
+  newMovie.id = Date.now(); 
   pending.push(newMovie);
   localStorage.setItem('luxfilms_pending_db', JSON.stringify(pending));
 };
 
-// Aprova o filme (tira da fila e joga no catálogo oficial)
+
 export const approveMovie = (pendingId) => {
   const pending = getPendingMovies();
   const movieToApprove = pending.find(m => m.id === pendingId);
   
   if (movieToApprove) {
-    // 1. Remove da lista de pendentes
+    
     const updatedPending = pending.filter(m => m.id !== pendingId);
     localStorage.setItem('luxfilms_pending_db', JSON.stringify(updatedPending));
     
-    // 2. Adiciona no banco oficial
+    
     addMovieToDB(movieToApprove);
   }
 };
 
-// Rejeita o filme (apaga da fila de espera)
+
 export const rejectMovie = (pendingId) => {
   const pending = getPendingMovies();
   const updatedPending = pending.filter(m => m.id !== pendingId);

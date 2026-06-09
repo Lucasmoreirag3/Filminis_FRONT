@@ -9,7 +9,7 @@ const MovieList = ({ role }) => {
   const [search, setSearch] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
   const [selectedYear, setSelectedYear] = useState('');
-  const [favorites, setFavorites] = useState([]); // Estado para guardar os favoritos
+  const [favorites, setFavorites] = useState([]); 
 
   
   useEffect(() => {

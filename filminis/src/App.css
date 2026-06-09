@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* Limpa qualquer bloqueio de largura que possa estar esmagando o fundo */
+
 .container {
   width: 100%;
   max-width: 100vw;
@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* Garante que o fundo da página inteira seja preto por padrão, eliminando rebarbas brancas */
+
 body, html {
   margin: 0;
   padding: 0;

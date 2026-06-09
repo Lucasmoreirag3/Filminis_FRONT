@@ -14,10 +14,10 @@ const Login = ({ setToken, setRole }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Puxa a lista de usuários criados lá no cadastro
+    
     const usuariosSalvos = JSON.parse(localStorage.getItem('fake_database')) || [];
     
-    // Procura se tem alguém na lista com esse email e senha
+    
     const usuarioEncontrado = usuariosSalvos.find(
       (user) => user.email === email && user.password === password
     );
