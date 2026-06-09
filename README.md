@@ -151,3 +151,8 @@ Observação: algumas rotas usam query params (`?id=...`) enquanto outras podem 
 - Componentização: arquivos CSS por componente (`components/*.css`).
 - Recomenda-se garantir responsividade, estados de carregamento e validação de formulários no cliente.
 - Melhorias sugeridas: feedback de upload de poster, previews de imagem, paginação/virtualização para longas listagens.
+
+
+**Links**
+https://www.figma.com/design/X1ZQoS8FPClpYOEPfx1Eww/Sem-t%C3%ADtulo?node-id=0-1&t=hXbNB4DUQtjlQd6f-1
+
